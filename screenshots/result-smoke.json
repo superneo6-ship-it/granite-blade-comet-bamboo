@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/?kod=5901861002712&widok=skaner",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Alejka",
+      "hasCanvas": false,
+      "bodyTextLen": 255,
+      "bodyTextHash": "c2793d3d0dd92501d7c45f130ce42fb1213870a77f1050a9a541e63b4bd749af",
+      "bodyTextPrefix": "Alejka Skaner lokalizacji towaru 12 szt. TOWAR Napój Black W baz",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/result-smoke.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Alejka",
+      "hasCanvas": false,
+      "bodyTextLen": 255,
+      "bodyTextHash": "c2793d3d0dd92501d7c45f130ce42fb1213870a77f1050a9a541e63b4bd749af",
+      "bodyTextPrefix": "Alejka Skaner lokalizacji towaru 12 szt. TOWAR Napój Black W baz",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/result-smoke-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/result-smoke.json"
+}

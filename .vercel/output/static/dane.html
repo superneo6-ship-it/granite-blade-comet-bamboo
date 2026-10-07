@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dane towarów — Alejka</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #0b0c0d;
+        --fg: #eef1ee;
+        --muted: #8d948e;
+        --line: #2a2e31;
+        --head: #161a1c;
+        --accent: #3d9a8c;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+        background: var(--bg);
+        color: var(--fg);
+        padding: 24px 16px 48px;
+        line-height: 1.5;
+      }
+      main { max-width: 1100px; margin: 0 auto; }
+      h1 {
+        font-family: "Barlow Condensed", "Segoe UI", sans-serif;
+        font-weight: 600;
+        letter-spacing: -0.03em;
+        font-size: 2rem;
+        margin: 0 0 8px;
+      }
+      .hint {
+        color: var(--muted);
+        max-width: 62ch;
+        margin: 0 0 24px;
+      }
+      code {
+        font-family: ui-monospace, "IBM Plex Mono", monospace;
+        font-size: 0.9em;
+        color: var(--accent);
+      }
+      .wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 12px; }
+      table { border-collapse: collapse; width: 100%; min-width: 720px; }
+      th, td {
+        padding: 10px 12px;
+        text-align: left;
+        border-bottom: 1px solid var(--line);
+        font-size: 0.95rem;
+      }
+      th {
+        background: var(--head);
+        font-weight: 500;
+        color: var(--muted);
+        font-size: 0.75rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        position: sticky;
+        top: 0;
+      }
+      tr:last-child td { border-bottom: 0; }
+      td:nth-child(1), td:nth-child(3) {
+        font-family: ui-monospace, "IBM Plex Mono", monospace;
+        font-variant-numeric: tabular-nums;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Dane towarów</h1>
+      <p class="hint">
+        To jest plik z bazą skanera. Żeby dodać towar, skopiuj jeden wiersz
+        <code><tr>…</tr></code> i zmień wartości w komórkach
+        <code><td></code>. Kolejność kolumn: kod kreskowy, nazwa,
+        numer artykułu, alejka, regał, półka, pozycja od lewej.
+        Półka 1 jest na dole regału, pozycja 1 to pierwszy towar od lewej.
+      </p>
+      <div class="wrap">
+        <table id="towary">
+          <thead>
+            <tr>
+              <th>Kod kreskowy</th>
+              <th>Nazwa</th>
+              <th>Numer artykułu</th>
+              <th>Alejka</th>
+              <th>Regał</th>
+              <th>Półka</th>
+              <th>Pozycja od lewej</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>5901861002712</td>
+              <td>Napój Black</td>
+              <td>320463</td>
+              <td>3</td>
+              <td>2</td>
+              <td>3</td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>5907700270124</td>
+              <td>Napój Tiger 250 ml</td>
+              <td>320471</td>
+              <td>3</td>
+              <td>2</td>
+              <td>3</td>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>5900398601807</td>
+              <td>Woda Cisowianka 1,5 l</td>
+              <td>118204</td>
+              <td>3</td>
+              <td>2</td>
+              <td>4</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>5900512300117</td>
+              <td>Mleko Łaciate 3,2% 1 l</td>
+              <td>204881</td>
+              <td>1</td>
+              <td>1</td>
+              <td>2</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>5906485300123</td>
+              <td>Chleb tostowy Tastino</td>
+              <td>219004</td>
+              <td>1</td>
+              <td>3</td>
+              <td>1</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>5900820001157</td>
+              <td>Cukier Królewski 1 kg</td>
+              <td>156002</td>
+              <td>2</td>
+              <td>4</td>
+              <td>1</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>5900084011623</td>
+              <td>Makaron Lubella świderki 500 g</td>
+              <td>441290</td>
+              <td>2</td>
+              <td>1</td>
+              <td>3</td>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>5900215012349</td>
+              <td>Olej Kujawski 1 l</td>
+              <td>330918</td>
+              <td>2</td>
+              <td>2</td>
+              <td>1</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>5900396012345</td>
+              <td>Kawa Jacobs Krönung 250 g</td>
+              <td>778102</td>
+              <td>4</td>
+              <td>3</td>
+              <td>2</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>5900497012348</td>
+              <td>Herbata Lipton Yellow Label 100 tb</td>
+              <td>662011</td>
+              <td>4</td>
+              <td>3</td>
+              <td>2</td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>5900691012342</td>
+              <td>Płyn Ludwik cytrynowy 1 l</td>
+              <td>890221</td>
+              <td>5</td>
+              <td>1</td>
+              <td>4</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>5901234123457</td>
+              <td>Papier toaletowy Velvet 8 rolek</td>
+              <td>551003</td>
+              <td>5</td>
+              <td>2</td>
+              <td>1</td>
+              <td>8</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </body>
+</html>
